@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(page_title="Transaction Anomaly Detector", layout="wide")
-st.title("💳 AI-Powered Transaction Anomaly Detector")
+st.title("AI-Powered Transaction Anomaly Detector")
 
 uploaded_file = st.file_uploader("Upload Transaction CSV", type="csv")
 
