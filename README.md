@@ -27,18 +27,21 @@ This project is a practical implementation of a real-time fraud detection system
 - Predicts fraud likelihood per transaction
 - Displays visual and textual summaries of results
 
-## Project Structure
+
+### File Structure
+```plaintext
 fraud-detector-ai/
-├── app/
-│ └── dashboard.py # Main Streamlit app
-├── models/
-│ └── fraud_detector.py # ML model logic
-├── utils/
-│ └── helper.py # Utility functions
-├── data/
-│ └── sample.csv # Sample data
-├── requirements.txt # Python dependencies
-└── README.md
+├── app/                        # Main directory for the Streamlit application
+│   └── dashboard.py            # Streamlit app: User interface for fraud detection
+├── models/                     # Machine learning model logic
+│   └── fraud_detector.py       # Contains fraud detection model and prediction logic
+├── utils/                      # Utility functions used across the project
+│   └── helper.py               # Helper functions for data processing and transformation
+├── data/                       # Directory for data files
+│   └── sample.csv              # Sample transaction data (for testing the model)
+├── requirements.txt            # Python dependencies for the project
+└── README.md                   # Project documentation and overview
+```
 
 ## Run Locally
 
