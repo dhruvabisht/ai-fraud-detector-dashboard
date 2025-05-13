@@ -58,7 +58,14 @@ fraud-detector-ai/
 
 ## Screenshots
 
-Upload screenshots here after hosting (e.g., dashboard overview, fraud alert panel)
+<img width="1440" alt="Website SS" src="https://github.com/user-attachments/assets/eeef2c5f-1c3c-4414-8717-0f5706f01517" />
+
+<img width="1432" alt="Dashboard SS" src="https://github.com/user-attachments/assets/5671af49-3ed1-45c8-b647-36422ce85fc9" />
+
+<img width="1432" alt="Graphs SS" src= "https://github.com/user-attachments/assets/6e923fbe-e88f-4f54-82ba-ef3206428e98" />
+
+
+
 
 ## Use Case
 
