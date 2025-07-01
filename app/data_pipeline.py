@@ -27,15 +27,17 @@ def build_preprocessor():
     # Categorical pipeline: constant imputation + one-hot encoding
     cat_pipe = Pipeline([
         ("impute", SimpleImputer(strategy="constant", fill_value="Unknown")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse=False))
+        # use sparse_output for newer sklearn versions
+        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False))
     ])
 
     # Timestamp pipeline: parse to datetime, extract hour and day-of-week
     def extract_time_features(df):
-        df = pd.to_datetime(df["Timestamp"], errors="coerce")
+        # Ensure Timestamp is parsed; errors->NaT
+        ts = pd.to_datetime(df["Timestamp"], errors="coerce")
         return pd.DataFrame({
-            "hour": df.dt.hour.fillna(-1).astype(int),
-            "dayofweek": df.dt.dayofweek.fillna(-1).astype(int)
+            "hour": ts.dt.hour.fillna(-1).astype(int),
+            "dayofweek": ts.dt.dayofweek.fillna(-1).astype(int)
         })
 
     time_pipe = Pipeline([
@@ -83,7 +85,6 @@ class DataPipeline:
         Learn any statistics from training data (e.g. medians, categories).
         """
         self._validate_schema(df)
-        # Fit the preprocessor to the DataFrame
         self.preprocessor.fit(df)
         self.fitted = True
         return self
@@ -101,12 +102,11 @@ class DataPipeline:
         """
         Shortcut for fit followed by transform.
         """
-        self.fit(df)
-        return self.transform(df)
+        return self.fit(df).transform(df)
 
 
 if __name__ == "__main__":
-    # Quick smoke test when running as a script
+    # Smoke test
     sample = pd.DataFrame({
         "Amount": [100.0, None, 250.5],
         "Latitude": [52.3, 53.1, None],
