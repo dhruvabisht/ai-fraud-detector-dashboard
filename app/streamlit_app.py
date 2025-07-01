@@ -2,6 +2,15 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+
+from data_pipeline import DataPipeline
+
+dp = DataPipeline()
+clean_X = dp.fit_transform(raw_df)        # on training data
+new_X = dp.transform(new_upload_df)       # on recruiter uploads
+
+
+
 import streamlit as st
 import pandas as pd
 from models.fraud_detector import FraudDetector
