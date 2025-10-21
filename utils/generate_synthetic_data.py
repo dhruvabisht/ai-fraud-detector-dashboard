@@ -23,7 +23,7 @@ def generate_data(n=5000):
         }
         data.append(transaction)
     df = pd.DataFrame(data)
-    df.to_csv("/Applications/Dhruva/Fraud detector using AI/data/synthetic_transactions.csv", index=False)
+    df.to_csv("/Applications/Dhruva/Projects/ai-fraud-detector-dashboard/synthetic_transactions.csv", index=False)
 
 if __name__ == "__main__":
     generate_data()

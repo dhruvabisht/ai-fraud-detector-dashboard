@@ -13,17 +13,22 @@ from models.fraud_detector import FraudDetector
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.set_page_config(page_title="Transaction Anomaly Detector", layout="wide")
-st.title("AI-Powered Transaction Anomaly Detector")
+st.set_page_config(page_title="AI-Powered Transaction Anomaly Detector – Demo Mode Available", layout="wide")
+st.title("AI-Powered Transaction Anomaly Detector – Demo Mode Available")
 
-# 2) File uploader
-uploaded_file = st.file_uploader("Upload Transaction CSV", type="csv")
-if not uploaded_file:
-    st.warning("Please upload a CSV with columns: Amount, Latitude, Longitude, Device_Type, Transaction_Type, Timestamp")
-    st.stop()
+# 2) File uploader with demo fallback
+uploaded_file = st.file_uploader("Upload Transaction CSV (or use demo dataset below)", type="csv")
 
-# 3) Read raw data
-raw_df = pd.read_csv(uploaded_file)
+# 3) Read raw data - auto-load demo if no file uploaded
+if uploaded_file is None:
+    st.info("📊 Demo dataset loaded for preview. Upload your own CSV above to analyze your data.")
+    try:
+        raw_df = pd.read_csv("synthetic_transactions.csv")
+    except FileNotFoundError:
+        st.error("Demo dataset not found. Please upload a CSV file.")
+        st.stop()
+else:
+    raw_df = pd.read_csv(uploaded_file)
 
 # 4) Show expected schema vs. your upload
 st.subheader("Expected schema")
@@ -34,6 +39,19 @@ st.table(pd.DataFrame({
 
 st.subheader("Your data sample")
 st.dataframe(raw_df.head())
+
+# Demo insights card
+if uploaded_file is None:
+    st.subheader("📈 Sample Insights (Demo)")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Total Transactions", f"{len(raw_df):,}")
+    with col2:
+        st.metric("Expected Anomalies", "~100 (2%)")
+    with col3:
+        st.metric("Data Quality", "✅ Clean")
+    
+    st.info("💡 This demo shows how your transaction data would be analyzed. Upload your own CSV to see real fraud detection results!")
 
 # 5) Clean & transform
 dp = DataPipeline()
