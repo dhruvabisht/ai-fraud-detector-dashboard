@@ -246,11 +246,21 @@ with col2:
 
 # 15) Smart Footer
 st.markdown("---")
-st.markdown("""
-<div style='text-align: center; padding: 20px; background-color: #f0f2f6; border-radius: 10px;'>
-    <h4>🚀 Tech Stack & Highlights</h4>
-    <p><strong>Tech Stack:</strong> Python, Streamlit, scikit-learn, Pandas, Matplotlib, Plotly</p>
-    <p><strong>Highlights:</strong> Schema validation • Data migration • KPI dashboards • Explainable AI • Financial anomaly analysis</p>
-    <p><strong>Built by:</strong> <strong>Dhruva Bisht</strong> | MSc Computer Science (UCD) | <a href="https://github.com/dhruvabisht/ai-fraud-detector-dashboard">GitHub Repo</a></p>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("### 🚀 Tech Stack & Highlights")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("**Tech Stack:**")
+    st.markdown("Python, Streamlit, scikit-learn, Pandas, Matplotlib, Plotly")
+
+with col2:
+    st.markdown("**Highlights:**")
+    st.markdown("Schema validation • Data migration • KPI dashboards • Explainable AI • Financial anomaly analysis")
+
+with col3:
+    st.markdown("**Built by:**")
+    st.markdown("**Dhruva Bisht** | MSc Computer Science (UCD)")
+    st.markdown("[GitHub Repo](https://github.com/dhruvabisht/ai-fraud-detector-dashboard)")
+
+st.markdown("---")
