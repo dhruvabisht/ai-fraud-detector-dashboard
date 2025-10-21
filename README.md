@@ -53,7 +53,7 @@ fraud-detector-ai/
 
 ## Live Demo
 
-✅ [Live Streamlit App](https://your-username.streamlit.app)  
+✅ [Live Streamlit App](https://ai-fraud-detector-dashboard.streamlit.app/)  
 (Replace this link after deployment)
 
 ## Screenshots
