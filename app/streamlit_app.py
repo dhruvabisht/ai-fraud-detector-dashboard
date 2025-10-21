@@ -16,8 +16,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-st.set_page_config(page_title="AI-Powered Transaction Anomaly Detector – Demo Mode Available", layout="wide")
-st.title("AI-Powered Transaction Anomaly Detector – Demo Mode Available")
+st.set_page_config(page_title="AI-Powered Transaction Anomaly Detector", layout="wide")
+st.title("AI-Powered Transaction Anomaly Detector")
+st.markdown('<p style="color: #888; font-size: 16px; margin-top: -10px;">Demo Mode Active – Upload your own CSV to analyze custom data.</p>', unsafe_allow_html=True)
 
 # Killer first impression - Live KPIs above the fold
 st.markdown("---")
