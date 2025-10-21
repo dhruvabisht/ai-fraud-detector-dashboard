@@ -1,4 +1,4 @@
-# AI-Powered Transaction Anomaly Detector
+# FinGuard the AI-Powered Transaction Anomaly Detector
 
 A **Streamlit-based analytics dashboard** that detects fraudulent transactions, visualizes anomalies, and exports KPI summaries in real time.
 
