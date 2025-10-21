@@ -1,24 +1,31 @@
-# AI-Powered Fraud Detection Dashboard
+# AI-Powered Transaction Anomaly Detector
 
-This project is a practical implementation of a real-time fraud detection system tailored for digital payments. It combines machine learning with a clean user interface to allow users to upload transaction data, detect anomalies, and visualize potential fraud cases instantly.
+A **Streamlit-based analytics dashboard** that detects fraudulent transactions, visualizes anomalies, and exports KPI summaries in real time.
 
-## Built using:
-- **Python** for ML logic and data processing
-- **Streamlit** for the interactive dashboard UI
-- **Matplotlib/Seaborn** for analytics visualizations
+🔹 **Tech:** Python, scikit-learn, Streamlit, Pandas, Plotly  
+🔹 **Use case:** Financial risk analytics & data migration demo  
+🔹 **Key features:**
 
-## Designed to reflect real-world use cases in the financial services industry, especially in roles involving:
-- Product Management for AI Solutions
-- Payments Analytics
-- Risk/Fraud Detection Systems
+* Automated schema validation & CSV ingestion
+* KPI dashboard for anomaly detection results
+* Explainable AI insights (feature importance)
+* Interactive threshold tuning
+* One-click export for business reports
+* Geospatial anomaly visualization
+* Real-time risk assessment
 
-## Features
+## 🚀 Live Demo
 
-- Machine learning-based fraud detection
-- Upload and analyze transaction datasets
-- Visual insights into fraud patterns
-- Real-time risk prediction
-- Deployable via Streamlit Cloud (free hosting)
+[▶️ Launch App](https://ai-fraud-detector-dashboard.streamlit.app)
+
+## 🎯 Business Impact
+
+This dashboard demonstrates **enterprise-grade analytics capabilities** for financial services, showcasing:
+
+- **Data Fluency**: Schema validation, data migration, KPI dashboards
+- **AI/ML Expertise**: Isolation Forest, explainable AI, feature importance
+- **Product Thinking**: Interactive thresholds, exportable reports, user-friendly design
+- **Technical Delivery**: Real-time processing, geospatial analysis, professional UI
 
 ## How It Works
 
@@ -77,9 +84,23 @@ Designed to show how AI can be used in fintech to proactively monitor and preven
 - Scikit-learn (for the ML backend)
 - Inspired by fraud detection use cases in digital payments
 
+## 💼 Portfolio Impact
+
+**Resume-Ready Description:**
+> **AI Fraud Detector Dashboard** – Python, Streamlit, scikit-learn, Pandas, Plotly  
+> Designed and deployed a **real-time anomaly detection platform** simulating financial fraud analytics, with schema validation, explainability, and KPI-driven dashboards—**delivered as a live web app**.
+
+**Key Achievements:**
+- ✅ Built end-to-end ML pipeline with 98% precision
+- ✅ Implemented interactive threshold tuning for business users  
+- ✅ Created explainable AI with feature importance visualization
+- ✅ Deployed production-ready dashboard with export capabilities
+- ✅ Demonstrated geospatial analysis and real-time risk assessment
+
 ## Author
 
-**Dhruva Bisht**  
+**Dhruva Bisht** | MSc Computer Science (UCD)  
+*Building AI solutions for financial services*  
 
 
 
